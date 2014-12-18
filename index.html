@@ -21,7 +21,18 @@
          </li>
      </ul>
 
-   <a href="" class="btn btn-success">Sortear</a>
+   <a href="" ng-disabled="!likes" ng-click="sortear()" class="btn btn-success">Sortear</a>
+
+   <div class="col-md-12" ng-show="sorteado">
+     <h2> Parabéns, você foi sorteado </h2>
+     <p> {{ sorteado.name }} </p>
+     <img ng-src="http://graph.facebook.com/{{ sorteado.id }}/picture">
+   </div>
+
+   <br/>
+   <br/>
+   <br/>
+
  </div>
 
  </body>
