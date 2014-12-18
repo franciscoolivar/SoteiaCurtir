@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="SorteiaCurtir">
  <head>
     <title>Sistema de Sorteio Social</title>
     <meta charset="UTF8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" type="text/javascript"> </script>
+    <script src="app.js" type="text/javascript"> </script>
  </head>
- <body>
-  <div>
+ <body ng-controller="SorteioController">
+  <div class="container">
       <h1>SorteiaCurtir.com.br</h1>
-      <input type="text" placeholder="Digite aqui o ID da publicação do Facebook">
-     <ul>
-         <li>
-           <span>[FOTO]</span>
-           <span>Fernandno Sousa</span>
+      <input class="form-control" ng-model="pubID" type="text" placeholder="Digite aqui o ID da publicação do Facebook">
+      <ul>
+         <li ng-repeat="pessoa in likes">
+           <span>
+            <img ng-src="http://graph.facebook.com/{{ pessoa.id }}/picture">
+           </span>
+           <span> {{ pessoa.name }} </span>
          </li>
-     </ul>    
-  </div>    
- <a href="">Sortear</a>
+     </ul>
+
+   <a href="" class="btn btn-success">Sortear</a>
+ </div>
+
  </body>
 
 </html>
