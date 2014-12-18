@@ -13,5 +13,9 @@ app.controller('SorteioController', function($scope, $http) {
     }
   })
 
+  $scope.sortear = function() {
+    var item = $scope.likes[Math.floor(Math.random()*$scope.likes.length)];
+    $scope.sorteado = item
+  }
 
 })
