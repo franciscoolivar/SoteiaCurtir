@@ -12,8 +12,8 @@
   <div class="container">
       <h1>SorteiaCurtir.com.br</h1>
       <input class="form-control" ng-model="pubID" type="text" placeholder="Digite aqui o ID da publicação do Facebook">
-      <ul>
-         <li ng-repeat="pessoa in likes">
+      <ul class="list-group">
+         <li ng-repeat="pessoa in likes" class="list-group-item">
            <span>
             <img ng-src="http://graph.facebook.com/{{ pessoa.id }}/picture">
            </span>
